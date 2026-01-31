@@ -1,0 +1,143 @@
+:root {
+  --paper: #0b0b0b;
+  --ink: #f5f2ea;
+  --muted: #f5f2ea;
+}
+
+@font-face {
+  font-family: "Chicago Kare";
+  src: url("fonts/ChicagoKare-Regular.woff2") format("woff2"),
+    url("fonts/ChicagoKare-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Chicago Kare", "Courier New", monospace;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  padding: 96px 10vw;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  text-transform: none;
+  letter-spacing: 0.08em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.doom-page {
+  gap: 32px;
+}
+
+.doom-shell {
+  width: min(960px, 92vw);
+}
+
+.doom-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.doom-button {
+  font-family: "Chicago Kare", "Courier New", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.doom-button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.doom-link {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.doom-link:hover {
+  text-decoration: underline;
+}
+
+.doom-frame {
+  border: 1px solid var(--ink);
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+}
+
+.doom-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.doom-note {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 80px 24px;
+  }
+}
